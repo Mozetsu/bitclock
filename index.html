@@ -4,87 +4,26 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="style.css" />
 		<title>Bit Clock</title>
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="app.js"></script>
 	</head>
-	<body>
-		<h1 class="app-title"><span id="bit">bit</span> Clock</h1>
-		<div class="container">
-			<ul>
-				<li id="Hour">
-					<p class="title">H</p>
-					<div class="column H-squares">
-						<div class="bit-square H-col"></div>
-						<div class="bit-square H-col"></div>
-						<div class="bit-square H-col off"></div>
-						<div class="bit-square H-col off"></div>
-					</div>
-					<p class="Hv value">0</p>
-					<p class="Hb binary-value">0000</p>
-				</li>
-				<li id="hour">
-					<p class="title">h</p>
-					<div class="column h-squares">
-						<div class="bit-square h-col"></div>
-						<div class="bit-square h-col"></div>
-						<div class="bit-square h-col"></div>
-						<div class="bit-square h-col"></div>
-					</div>
-					<p class="hv value">0</p>
-					<p class="hb binary-value">0000</p>
-				</li>
-				<li id="Minute">
-					<p class="title">M</p>
-					<div class="column M-squares">
-						<div class="bit-square M-col"></div>
-						<div class="bit-square M-col"></div>
-						<div class="bit-square M-col"></div>
-						<div class="bit-square M-col off"></div>
-					</div>
-					<p class="Mv value">0</p>
-					<p class="Mb binary-value">0000</p>
-				</li>
-				<li id="minute">
-					<p class="title">m</p>
-					<div class="column m-squares">
-						<div class="bit-square m-col"></div>
-						<div class="bit-square m-col"></div>
-						<div class="bit-square m-col"></div>
-						<div class="bit-square m-col"></div>
-					</div>
-					<p class="mv value">0</p>
-					<p class="mb binary-value">0000</p>
-				</li>
-				<li id="Second">
-					<p class="title">S</p>
-					<div class="column S-squares">
-						<div class="bit-square S-col"></div>
-						<div class="bit-square S-col"></div>
-						<div class="bit-square S-col"></div>
-						<div class="bit-square S-col off"></div>
-					</div>
-					<p class="Sv value">0</p>
-					<p class="Sb binary-value">0000</p>
-				</li>
-				<li id="second">
-					<p class="title">s</p>
-					<div class="column s-squares">
-						<div class="bit-square s-col"></div>
-						<div class="bit-square s-col"></div>
-						<div class="bit-square s-col"></div>
-						<div class="bit-square s-col"></div>
-					</div>
-					<p class="sv value">0</p>
-					<p class="sb binary-value">0000</p>
-				</li>
-			</ul>
-		</div>
-		<footer>
-			<p>
-				<span id="year"></span> - created by
-				<a id="mozetsu" href="https://twitter.com/Mozetsu" target="_blank">@Mozetsu</a>
-			</p>
-		</footer>
+	<body class="dark">
+		<header>
+			<h3>Bit _clock</h3>
+		</header>
+		<main>
+			<div class="clock">
+				<div class="clock-cell"></div>
+				<div class="clock-cell"></div>
+				<div class="clock-cell"></div>
+				<div class="clock-cell"></div>
+				<div class="clock-cell"></div>
+				<div class="clock-cell"></div>
+				<div class="clock-cell"></div>
+				<div class="clock-cell"></div>
+				<div class="clock-cell"></div>
+			</div>
+		</main>
 	</body>
-	<script src="app.js"></script>
 </html>
