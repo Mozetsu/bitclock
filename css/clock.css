@@ -5,8 +5,18 @@
 }
 
 .clock-cell:nth-child(2) {
+	padding-right: 40px;
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
+
+.social {
+	margin: 0 15px;
+	cursor: pointer;
+}
+
 .clock-cell:nth-child(2)::after {
 	position: absolute;
 	bottom: 0;

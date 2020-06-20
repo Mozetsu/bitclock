@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import './circuit.css';
 @import './clock.css';
 
 :root {
@@ -74,4 +73,9 @@ header h5::after {
 	position: absolute;
 	top: 19.2px;
 	right: -40px;
+}
+
+footer {
+	position: fixed;
+	bottom: 3%;
 }
