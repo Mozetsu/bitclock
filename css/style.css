@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import './circuit.css';
+@import './clock.css';
+
+:root {
+	--border-radius: 2px;
+	--binary-cell-size: 40px;
+	/* dark theme */
+	--dark01: #5e5e5e;
+	--dark02: #4e4d4d;
+	--pink01: #ffb9ca;
+	--pink03: #ae8b94;
+}
+
+.dark {
+	--bc: var(--dark01);
+	--fg: var(--dark02);
+	--primary: var(--pink01);
+	--secondary: var(--pink03);
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--bc);
+	color: var(--primary);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	font-family: 'Open Sans';
+	font-size: 20px;
+}
+
+header {
+	position: fixed;
+	top: 6%;
+}
+
+header h5::before {
+	content: '';
+	height: 1px;
+	width: 40px;
+	background-color: var(--primary);
+	position: absolute;
+	top: 19.2px;
+	left: -40px;
+}
+
+header h5 {
+	position: relative;
+	padding: 7px 18px;
+	background-color: var(--fg);
+	border: 1px solid var(--primary);
+	border-radius: var(--border-radius);
+	z-index: 3;
+}
+
+header h5::after {
+	content: '';
+	height: 1px;
+	width: 40px;
+	background-color: var(--primary);
+	position: absolute;
+	top: 19.2px;
+	right: -40px;
+}

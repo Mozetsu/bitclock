@@ -1,0 +1,110 @@
+.circuit {
+	background-color: var(--fg);
+	border: 1px solid var(--primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border-radius: var(--border-radius);
+}
+
+.circuit-github::before {
+	content: '';
+	height: 1px;
+	width: 200px;
+	background-color: var(--primary);
+	position: absolute;
+	top: 50px;
+	right: -50px;
+	z-index: -1;
+}
+
+.circuit-github {
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	width: 100px;
+	height: 100px;
+	font-size: 50px;
+}
+
+.circuit-github::after {
+	content: '';
+	height: 1px;
+	width: 200px;
+	background-color: var(--primary);
+	position: absolute;
+	top: 50px;
+	right: -50px;
+	z-index: -1;
+	transform: rotate(90deg);
+}
+
+.circuit-twitter::before {
+	content: '';
+	height: 300px;
+	width: 1px;
+	background-color: var(--primary);
+	position: absolute;
+	top: -100px;
+	left: 30px;
+	z-index: -1;
+}
+
+.circuit-twitter {
+	position: absolute;
+	top: 10%;
+	right: 20%;
+	width: 70px;
+	height: 70px;
+	font-size: 30px;
+}
+
+.circuit-dev::before {
+	content: '';
+	height: 200px;
+	width: 1px;
+	background-color: var(--primary);
+	position: absolute;
+	top: -30px;
+	left: 20px;
+	z-index: -1;
+}
+
+.circuit-dev {
+	position: absolute;
+	bottom: 8%;
+	left: 30%;
+	width: 40px;
+	height: 40px;
+	font-size: 16px;
+}
+
+.circuit-theme {
+	position: absolute;
+	bottom: 20%;
+	right: 30%;
+	width: 50px;
+	height: 50px;
+	font-size: 26px;
+}
+
+.circuit-about::before {
+	content: '';
+	height: 400px;
+	width: 1px;
+	background-color: var(--primary);
+	position: absolute;
+	top: -120px;
+	left: 30px;
+	z-index: -1;
+}
+
+.circuit-about {
+	position: absolute;
+	bottom: 10%;
+	right: 29.5%;
+	width: 60px;
+	height: 60px;
+	font-size: 16px;
+}
