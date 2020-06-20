@@ -7,27 +7,29 @@
 	--bc-transition: background-color 0.3s ease-in-out;
 	/* dark theme */
 	--white: #fff;
-	--dark01: #5e5e5e;
-	--dark02: #4e4d4d;
-	--pink00: #fffdfd;
-	--pink001: #ffd9e2;
-	--pink01: #ffb9ca;
-	--pink02: #ffa4ba;
-	--pink03: #ae8b94;
+
+	--dark01: #515151;
+	--dark02: #454545;
+
+	--pink01: #fff6f6;
+	--pink02: #ffd9e2;
+	--pink03: #ffb1c4;
+	--pink04: #ffa4ba;
+	--pink05: #d4aab3;
 }
 
 .dark {
 	--bc: var(--dark01);
 	--fg: var(--dark02);
-	--primary: var(--pink01);
-	--secondary: var(--pink03);
+	--primary: var(--pink03);
+	--secondary: var(--pink05);
 }
 
 .light {
-	--bc: var(--pink00);
+	--bc: var(--pink01);
 	--fg: var(--white);
-	--primary: var(--pink02);
-	--secondary: var(--pink001);
+	--primary: var(--pink04);
+	--secondary: var(--pink02);
 }
 
 *,

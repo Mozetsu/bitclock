@@ -48,7 +48,6 @@ function setSmoothTransition() {
 updateTimeUI(); // imediately updates time on page load
 setInterval(updateTimeUI, 1000); // set interval of 1 sec to update time
 function updateTimeUI() {
-	document.querySelectorAll('.binary-cell').forEach((bit) => bit.classList.remove(bit.classList[1]));
 	// ---------------------------------------------------------------------
 	const globalTime = new Date();
 	const currHour = globalTime.getHours().toString().split('');
@@ -67,33 +66,48 @@ function updateTimeUI() {
 	secondsDecimal.innerHTML = currSeconds[0];
 	secondsUnit.innerHTML = currSeconds[1];
 
-	const hourDecimalBinary = parseInt(currHour[0]).toString(2).split('').reverse();
+	const hourDecimalBinary = decimalToBinary(parseInt(currHour[0]));
 	hourDecimalBinary.forEach((bit, i) => {
 		if (bit > 0) return hourDecimalBinaryHTML.children[i].classList.add('active');
+		hourDecimalBinaryHTML.children[i].classList.remove('active');
 	});
 
-	const hourUnitBinary = parseInt(currHour[1]).toString(2).split('').reverse();
+	const hourUnitBinary = decimalToBinary(parseInt(currHour[1]));
 	hourUnitBinary.forEach((bit, i) => {
 		if (bit > 0) return hourUnitBinaryHTML.children[i].classList.add('active');
+		hourUnitBinaryHTML.children[i].classList.remove('active');
 	});
 
-	const minutesDecimalBinary = parseInt(currMinutes[0]).toString(2).split('').reverse();
+	const minutesDecimalBinary = decimalToBinary(parseInt(currMinutes[0]));
 	minutesDecimalBinary.forEach((bit, i) => {
 		if (bit > 0) return minutesDecimalBinaryHTML.children[i].classList.add('active');
+		minutesDecimalBinaryHTML.children[i].classList.remove('active');
 	});
 
-	const minutesUnitBinary = parseInt(currMinutes[1]).toString(2).split('').reverse();
+	const minutesUnitBinary = decimalToBinary(parseInt(currMinutes[1]));
 	minutesUnitBinary.forEach((bit, i) => {
 		if (bit > 0) return minutesUnitBinaryHTML.children[i].classList.add('active');
+		minutesUnitBinaryHTML.children[i].classList.remove('active');
 	});
 
-	const secondsDecimalBinary = parseInt(currSeconds[0]).toString(2).split('').reverse();
+	const secondsDecimalBinary = decimalToBinary(parseInt(currSeconds[0]));
 	secondsDecimalBinary.forEach((bit, i) => {
 		if (bit > 0) return secondsDecimalBinaryHTML.children[i].classList.add('active');
+		secondsDecimalBinaryHTML.children[i].classList.remove('active');
 	});
 
-	const secondsUnitBinary = parseInt(currSeconds[1]).toString(2).split('').reverse();
+	const secondsUnitBinary = decimalToBinary(parseInt(currSeconds[1]));
 	secondsUnitBinary.forEach((bit, i) => {
 		if (bit > 0) return secondsUnitBinaryHTML.children[i].classList.add('active');
+		secondsUnitBinaryHTML.children[i].classList.remove('active');
 	});
+}
+
+// converts decimal number to binary array
+function decimalToBinary(number) {
+	const binaryArr = (number >>> 0).toString(2).split('');
+
+	for (let i = 4 - binaryArr.length; i > 0; i--) binaryArr.unshift(0);
+
+	return binaryArr;
 }
