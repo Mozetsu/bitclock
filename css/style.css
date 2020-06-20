@@ -4,6 +4,7 @@
 :root {
 	--border-radius: 2px;
 	--binary-cell-size: 40px;
+	--bc-transition: background-color 0.3s ease-in-out;
 	/* dark theme */
 	--white: #fff;
 	--dark01: #5e5e5e;
@@ -48,8 +49,13 @@ body {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
 header {
