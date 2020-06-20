@@ -30,11 +30,28 @@
 }
 
 .clock-cell:nth-child(3) {
+	position: relative;
 	border-left: 1px solid var(--primary);
 	border-bottom: 1px solid var(--primary);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.pseudo-square {
+	position: absolute;
+
+	width: 17px;
+	height: 17px;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--primary);
+	background-color: var(--fg);
+	z-index: 2;
+}
+
+.pseudo-top {
+	bottom: -9px;
+	left: -9px;
 }
 
 .clock-cell:nth-child(4) {
@@ -55,20 +72,6 @@
 	align-items: center;
 }
 
-.clock-cell:nth-child(5)::before {
-	position: absolute;
-	content: '';
-	width: 17px;
-	height: 17px;
-	top: -9px;
-	right: -9px;
-	background-color: var(--fg);
-	border: 1px solid var(--primary);
-	z-index: 2;
-	border-radius: var(--border-radius);
-	transition: var(--bc-transition);
-}
-
 .clock-cell:nth-child(5) {
 	padding: 25px 0;
 	position: relative;
@@ -76,19 +79,6 @@
 	border-bottom: 1px solid var(--primary);
 	display: flex;
 	justify-content: space-evenly;
-}
-
-.clock-cell:nth-child(5)::after {
-	position: absolute;
-	content: '';
-	width: 17px;
-	height: 17px;
-	bottom: -9px;
-	left: -9px;
-	background-color: var(--fg);
-	border: 1px solid var(--primary);
-	border-radius: var(--border-radius);
-	transition: var(--bc-transition);
 }
 
 .clock-cell:nth-child(6) {
@@ -105,8 +95,14 @@
 }
 
 .clock-cell:nth-child(7) {
+	position: relative;
 	background-color: transparent;
 	border-right: 1px solid var(--primary);
+}
+
+.pseudo-bottom {
+	top: -9px;
+	right: -9px;
 }
 
 .clock-cell:nth-child(8) {

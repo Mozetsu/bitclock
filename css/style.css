@@ -19,7 +19,7 @@
 	--pink07: #3f373a;
 
 	/* purple */
-	--purple01: #f7f6ff;
+	--purple01: #FBFBFF;
 	--purple02: #d8d3ff;
 	--purple03: #a79ef0;
 	--purple04: #aba1ff;
@@ -35,12 +35,12 @@
 	--secondary: var(--pink05);
 }
 
-/* .dark {
+.dark {
 	--bc: var(--purple06);
 	--fg: var(--purple07);
 	--primary: var(--purple03);
 	--secondary: var(--purple05);
-} */
+}
 
 .light {
 	--bc: var(--pink01);
@@ -49,12 +49,12 @@
 	--secondary: var(--pink02);
 }
 
-/* .light {
+.light {
 	--bc: var(--purple01);
 	--fg: var(--white);
 	--primary: var(--purple04);
 	--secondary: var(--purple02);
-} */
+}
 
 *,
 *::before,

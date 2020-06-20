@@ -39,13 +39,17 @@ function verifyTheme() {
 	if (bodyHTML.classList[0] !== savedTheme) changeTheme(bodyHTML);
 }
 
-setTimeout(setSmoothTransition, 100);
+setTimeout(setSmoothTransition, 500);
 function setSmoothTransition() {
 	bodyHTML.style.transition = 'background-color .3s ease-in-out';
 	document.querySelector('.page-title').style.transition = 'background-color .3s ease-in-out';
 	document
 		.querySelectorAll('.binary-cell')
 		.forEach((cell) => (cell.style.transition = 'background-color .3s ease-in-out'));
+
+	document
+		.querySelectorAll('.pseudo-square')
+		.forEach((sqr) => (sqr.style.transition = 'background-color .3s ease-in-out'));
 }
 
 updateTimeUI(); // imediately updates time on page load
@@ -109,8 +113,6 @@ function updateTimeUI() {
 // converts decimal number to binary array
 function decimalToBinary(number) {
 	const binaryArr = (number >>> 0).toString(2).split('');
-
 	for (let i = 4 - binaryArr.length; i > 0; i--) binaryArr.unshift(0);
-
 	return binaryArr;
 }
