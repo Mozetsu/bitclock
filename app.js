@@ -1,6 +1,6 @@
 const bodyHTML = document.querySelector('body');
-const themeBtn = document.querySelector('.fa-sun');
-themeBtn.addEventListener('click', () => changeTheme(bodyHTML));
+const themeBtn = document.querySelector('.themeBtn');
+themeBtn.addEventListener('click', changeTheme);
 
 // time variables -------------------------------------------------------------
 const hoursDecimal = document.querySelector('.hours').children[0];
@@ -22,11 +22,14 @@ const minutesUnitBinaryHTML = document.querySelector('.minutes-unit');
 const secondsDecimalBinaryHTML = document.querySelector('.seconds-decimal');
 const secondsUnitBinaryHTML = document.querySelector('.seconds-unit');
 
-function changeTheme(elem) {
-	const currentTheme = elem.classList[0];
+function changeTheme() {
+	const currentTheme = bodyHTML.classList[0];
 	const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-	elem.classList.remove(currentTheme);
-	elem.classList.add(newTheme);
+	const newThemeIcon = newTheme === 'light' ? 'fa-moon' : 'fa-sun';
+	bodyHTML.classList.remove(currentTheme);
+	bodyHTML.classList.add(newTheme);
+	themeBtn.classList.remove(themeBtn.classList[3]);
+	themeBtn.classList.add(newThemeIcon);
 	localStorage.setItem('theme', newTheme);
 }
 
