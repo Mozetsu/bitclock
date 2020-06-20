@@ -5,9 +5,13 @@
 	--border-radius: 2px;
 	--binary-cell-size: 40px;
 	/* dark theme */
+	--white: #fff;
 	--dark01: #5e5e5e;
 	--dark02: #4e4d4d;
+	--pink00: #fffdfd;
+	--pink001: #ffd9e2;
 	--pink01: #ffb9ca;
+	--pink02: #ffa4ba;
 	--pink03: #ae8b94;
 }
 
@@ -16,6 +20,13 @@
 	--fg: var(--dark02);
 	--primary: var(--pink01);
 	--secondary: var(--pink03);
+}
+
+.light {
+	--bc: var(--pink00);
+	--fg: var(--white);
+	--primary: var(--pink02);
+	--secondary: var(--pink001);
 }
 
 *,
