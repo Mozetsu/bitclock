@@ -30,6 +30,9 @@
 .clock-cell:nth-child(3) {
 	border-left: 1px solid var(--primary);
 	border-bottom: 1px solid var(--primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .clock-cell:nth-child(4) {

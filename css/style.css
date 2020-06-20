@@ -8,22 +8,38 @@
 	/* dark theme */
 	--white: #fff;
 
-	--dark01: #515151;
-	--dark02: #454545;
-
+	/* pink */
 	--pink01: #fff6f6;
 	--pink02: #ffd9e2;
-	--pink03: #ffb1c4;
+	--pink03: #e49baf;
 	--pink04: #ffa4ba;
 	--pink05: #d4aab3;
+	--pink06: #504a4c;
+	--pink07: #4a4144;
+
+	/* purple */
+	--purple01: #f7f6ff;
+	--purple02: #d8d3ff;
+	--purple03: #a79ef0;
+	--purple04: #aba1ff;
+	--purple05: #8981b4;
+	--purple06: #504f58;
+	--purple07: #42424f;
 }
 
 .dark {
-	--bc: var(--dark01);
-	--fg: var(--dark02);
+	--bc: var(--pink06);
+	--fg: var(--pink07);
 	--primary: var(--pink03);
 	--secondary: var(--pink05);
 }
+
+/* .dark {
+	--bc: var(--purple06);
+	--fg: var(--purple07);
+	--primary: var(--purple03);
+	--secondary: var(--purple05);
+} */
 
 .light {
 	--bc: var(--pink01);
@@ -31,6 +47,13 @@
 	--primary: var(--pink04);
 	--secondary: var(--pink02);
 }
+
+/* .light {
+	--bc: var(--purple01);
+	--fg: var(--white);
+	--primary: var(--purple04);
+	--secondary: var(--purple02);
+} */
 
 *,
 *::before,
@@ -92,6 +115,10 @@ header h5::after {
 	position: absolute;
 	top: 19.2px;
 	right: -40px;
+}
+
+.zdog-canvas {
+	cursor: pointer;
 }
 
 footer {
