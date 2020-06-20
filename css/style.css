@@ -123,5 +123,6 @@ header h5::after {
 
 footer {
 	position: fixed;
+	font-size: 14px;
 	bottom: 3%;
 }
