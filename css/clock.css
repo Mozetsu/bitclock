@@ -40,7 +40,6 @@
 
 .pseudo-square {
 	position: absolute;
-
 	width: 17px;
 	height: 17px;
 	border-radius: var(--border-radius);
@@ -139,11 +138,6 @@
 	border: none;
 }
 
-.hide {
-	opacity: 0;
-	pointer-events: none;
-}
-
 .time {
 	display: flex;
 	align-items: center;
@@ -187,4 +181,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.hide {
+	opacity: 0;
+	pointer-events: none;
 }

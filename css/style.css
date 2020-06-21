@@ -6,20 +6,10 @@
 	--border-radius: 2px;
 	--binary-cell-size: 40px;
 	--bc-transition: background-color 0.3s ease-in-out;
-	/* dark theme */
+
 	--white: #fff;
-
-	/* pink */
-	--pink01: #fff8f8;
-	--pink02: #ffd9e2;
-	--pink03: #e68ea5;
-	--pink04: #ffa4ba;
-	--pink05: #d4aab3;
-	--pink06: #413e3f;
-	--pink07: #3f373a;
-
 	/* purple */
-	--purple01: #FBFBFF;
+	--purple01: #fbfbff;
 	--purple02: #d8d3ff;
 	--purple03: #a79ef0;
 	--purple04: #aba1ff;
@@ -29,24 +19,10 @@
 }
 
 .dark {
-	--bc: var(--pink06);
-	--fg: var(--pink07);
-	--primary: var(--pink03);
-	--secondary: var(--pink05);
-}
-
-.dark {
 	--bc: var(--purple06);
 	--fg: var(--purple07);
 	--primary: var(--purple03);
 	--secondary: var(--purple05);
-}
-
-.light {
-	--bc: var(--pink01);
-	--fg: var(--white);
-	--primary: var(--pink04);
-	--secondary: var(--pink02);
 }
 
 .light {
@@ -109,13 +85,6 @@ header h5 {
 	z-index: 3;
 }
 
-main {
-	width: 100%;
-	max-width: 650px;
-	height: 100%;
-	max-height: 490px;
-}
-
 header h5::after {
 	content: '';
 	height: 1px;
@@ -126,8 +95,11 @@ header h5::after {
 	right: -40px;
 }
 
-.zdog-canvas {
-	cursor: pointer;
+main {
+	width: 100%;
+	max-width: 650px;
+	height: 100%;
+	max-height: 490px;
 }
 
 footer {
