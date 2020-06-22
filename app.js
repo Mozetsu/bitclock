@@ -6,7 +6,10 @@ Bitclock.update(); // imediately update clock on page load
 setInterval(() => Bitclock.update(), 200); // update clock every 200ms
 
 const bodyHTML = document.querySelector('body');
-bodyHTML.onload = () => setSmoothTransition(bodyHTML); // set smooth theme transition after body is loaded
+bodyHTML.onload = () => {
+	// set smooth theme transition after body is loaded
+	setTimeout(() => setSmoothTransition(bodyHTML), 1);
+};
 
 const themeBtn = document.querySelector('.themeBtn');
 themeBtn.addEventListener('click', () => changeTheme(bodyHTML));
