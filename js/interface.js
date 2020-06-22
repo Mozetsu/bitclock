@@ -3,7 +3,7 @@ export function verifyTheme(elem) {
 	if (elem.classList[0] !== savedTheme) changeTheme(elem);
 }
 
-export function changeTheme(elem) {
+export function changeTheme(elem = document.querySelector('body')) {
 	const currentTheme = elem.classList[0];
 	const themeBtn = elem.querySelector('.themeBtn');
 	const newTheme = currentTheme === 'light' ? 'dark' : 'light';
@@ -15,17 +15,14 @@ export function changeTheme(elem) {
 	localStorage.setItem('theme', newTheme);
 }
 
-export function setSmoothTransition(elem) {
-	const ms = 0.25;
+export function setSmoothTransition(elem = document.querySelector('body')) {
+	const ms = 0.3;
 
-	elem.style.transition = `background-color ${ms}s ease-in-out`;
-	elem.querySelector('.page-title').style.transition = `background-color ${ms}s ease-in-out`;
+	elem.style.transition = `background-color ${ms}s linear`;
 
-	elem
-		.querySelectorAll('.pseudo-square')
-		.forEach((sqr) => (sqr.style.transition = `background-color ${ms}s ease-in-out`));
+	elem.querySelector('.page-title').style.transition = `background-color ${ms}s linear`;
 
-	elem
-		.querySelectorAll('.binary-cell')
-		.forEach((cell) => (cell.style.transition = `background-color ${ms}s ease-in-out`));
+	elem.querySelectorAll('.pseudo-square').forEach((sqr) => (sqr.style.transition = `background-color ${ms}s linear`));
+
+	elem.querySelectorAll('.binary-cell').forEach((cell) => (cell.style.transition = `background-color ${ms}s linear`));
 }
