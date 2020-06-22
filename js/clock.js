@@ -32,14 +32,16 @@ export class Clock {
 
 		for (const unit in this.timeUnit) {
 			for (let n = 0; n < this.timeUnit[unit].length; n++) {
-				// Update HMTL hour ------------------------------------
-				this.time[unit][n].innerHTML = this.timeUnit[unit][n];
-				// Update HMTL binary cells ------------------------------------
-				const arr = this.decimalToBinary(this.timeUnit[unit][n]);
-				arr.forEach((bit, i) => {
-					if (bit > 0) return this.bits[unit][n].children[i].classList.add('active');
-					this.bits[unit][n].children[i].classList.remove('active');
-				});
+				if (this.time[unit][n].innerHTML !== this.timeUnit[unit][n].toString()) {
+					// Update HMTL hour ------------------------------------
+					this.time[unit][n].innerHTML = this.timeUnit[unit][n];
+					// Update HMTL binary cells ------------------------------------
+					const arr = this.decimalToBinary(this.timeUnit[unit][n]);
+					arr.forEach((bit, i) => {
+						if (bit > 0) return this.bits[unit][n].children[i].classList.add('active');
+						this.bits[unit][n].children[i].classList.remove('active');
+					});
+				}
 			}
 		}
 	}
