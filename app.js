@@ -2,7 +2,6 @@ import { changeTheme, setSmoothTransition } from './js/interface.js';
 import { Clock } from './js/clock.js';
 
 const Bitclock = new Clock();
-// Bitclock.initialize();
 Bitclock.update(); // imediately update clock on page load
 
 const bodyHTML = document.querySelector('body');
