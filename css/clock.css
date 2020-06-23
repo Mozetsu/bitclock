@@ -77,7 +77,8 @@
 	background-color: transparent;
 	border-bottom: 1px solid var(--primary);
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
+	padding: 0 25px;
 }
 
 .clock-cell:nth-child(6) {
@@ -141,18 +142,17 @@
 .time {
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-between;
 }
 
-.time:nth-child(2)::before {
+.pseudo-dot {
+	position: relative;
 	content: '';
 	width: 7px;
 	height: 7px;
 	border-radius: 50%;
 	background-color: var(--secondary);
-	position: absolute;
-	left: -20px;
-	transition: var(--bc-transition);
+	z-index: 3;
 }
 
 .time:nth-child(2) {
@@ -161,17 +161,6 @@
 
 .time:nth-child(3) {
 	position: relative;
-}
-
-.time:nth-child(3)::before {
-	content: '';
-	width: 7px;
-	height: 7px;
-	border-radius: 50%;
-	background-color: var(--secondary);
-	position: absolute;
-	left: -20px;
-	transition: var(--bc-transition);
 }
 
 .time-cell {

@@ -20,5 +20,6 @@ export function setSmoothTransition(elem = document.querySelector('body')) {
 	elem.style.transition = `background-color ${ms}s linear`;
 	elem.querySelector('.page-title').style.transition = `background-color ${ms}s linear`;
 	elem.querySelectorAll('.pseudo-square').forEach((sqr) => (sqr.style.transition = `background-color ${ms}s linear`));
+	elem.querySelectorAll('.pseudo-dot').forEach((dot) => (dot.style.transition = `background-color ${ms}s linear`));
 	elem.querySelectorAll('.binary-cell').forEach((cell) => (cell.style.transition = `background-color ${ms}s linear`));
 }
