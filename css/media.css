@@ -4,6 +4,15 @@
 		--font-size: 14px;
 	}
 
+	body {
+		justify-content: center;
+	}
+
+	header {
+		position: fixed;
+		top: 3%;
+	}
+
 	.clock {
 		grid-template-columns: minmax(10px, 30px) minmax(100px, 520px) minmax(10px, 30px);
 		grid-template-rows: minmax(10px, 30px) minmax(100px, 280px) minmax(10px, 30px);
@@ -48,5 +57,7 @@
 	footer {
 		font-size: 14px;
 		margin-bottom: 3%;
+		position: fixed;
+		bottom: 1%;
 	}
 }
