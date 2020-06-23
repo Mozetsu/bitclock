@@ -1,28 +1,24 @@
-export function verifyTheme(elem) {
-	const savedTheme = !localStorage.getItem('theme') ? 'light' : localStorage.getItem('theme');
-	if (elem.classList[0] !== savedTheme) changeTheme(elem);
+export function enableDarkMode(themeBtn = document.querySelector('.themeBtn')) {
+	document.body.classList.remove('light');
+	document.body.classList.add('dark');
+	themeBtn.classList.remove(themeBtn.classList[3]);
+	themeBtn.classList.add('fa-sun');
+	localStorage.setItem('darkMode', 'enabled');
 }
 
-export function changeTheme(elem = document.querySelector('body')) {
-	const currentTheme = elem.classList[0];
-	const themeBtn = elem.querySelector('.themeBtn');
-	const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-	const newThemeIcon = newTheme === 'light' ? 'fa-moon' : 'fa-sun';
-	elem.classList.remove(currentTheme);
-	elem.classList.add(newTheme);
+export function disableDarkMode(themeBtn = document.querySelector('.themeBtn')) {
+	document.body.classList.remove('dark');
+	document.body.classList.add('light');
 	themeBtn.classList.remove(themeBtn.classList[3]);
-	themeBtn.classList.add(newThemeIcon);
-	localStorage.setItem('theme', newTheme);
+	themeBtn.classList.add('fa-moon');
+	localStorage.setItem('darkMode', null);
 }
 
 export function setSmoothTransition(elem = document.querySelector('body')) {
 	const ms = 0.3;
 
 	elem.style.transition = `background-color ${ms}s linear`;
-
 	elem.querySelector('.page-title').style.transition = `background-color ${ms}s linear`;
-
 	elem.querySelectorAll('.pseudo-square').forEach((sqr) => (sqr.style.transition = `background-color ${ms}s linear`));
-
 	elem.querySelectorAll('.binary-cell').forEach((cell) => (cell.style.transition = `background-color ${ms}s linear`));
 }

@@ -1,3 +1,3 @@
-import { verifyTheme } from './interface.js';
+import { enableDarkMode } from './interface.js';
 
-verifyTheme(document.querySelector('body'));
+if (localStorage.getItem('darkMode') === 'enabled') enableDarkMode();
