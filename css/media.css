@@ -1,11 +1,35 @@
 @media only screen and (max-width: 500px) {
 	:root {
 		--cell-size: 30px;
+		--font-size: 14px;
+	}
+
+	.clock {
+		grid-template-columns: minmax(10px, 30px) minmax(100px, 520px) minmax(10px, 30px);
+		grid-template-rows: minmax(10px, 30px) minmax(100px, 250px) minmax(10px, 30px);
+	}
+
+	.clock-cell:nth-child(4) {
+		font-size: var(--font-size);
+	}
+
+	.clock-cell:nth-child(2) {
+		padding: 0 5% 5px 0;
+		font-size: var(--font-size);
+	}
+
+	.clock-cell:nth-child(2)::after {
+		width: 140px;
+	}
+
+	.clock-cell:nth-child(8) {
+		padding-top: 10px;
 	}
 
 	.clock-helper {
 		width: var(--cell-size);
 		height: var(--cell-size);
+		padding-right: 7px;
 	}
 
 	.binary-cell {
@@ -16,8 +40,13 @@
 
 	.time-cell {
 		margin: 3px;
-		font-size: 14px;
+		font-size: var(--font-size);
 		width: var(--cell-size);
 		height: var(--cell-size);
+	}
+
+	footer {
+		font-size: 14px;
+		margin-bottom: 3%;
 	}
 }
